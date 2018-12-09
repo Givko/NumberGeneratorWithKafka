@@ -52,6 +52,7 @@ namespace NumberConsumerProject
 
             var logger = new Logger();
             var numberConsumer = new NumberConsumer(new Consumer<Ignore, string>(conf), logger, "NumberStorage");
+            int count = 0;
 
             Action<string> callbackAction = (value) =>
             {
@@ -66,6 +67,7 @@ namespace NumberConsumerProject
                 numbersConsumed.Add(number);
                 if (numbersConsumed.Count == 10)
                 {
+                    count++;
                     Console.Write($"{string.Join(", ", numbersConsumed)} - ");
                     Console.WriteLine($"[{DateTime.Now}] : {numbersConsumed.Average()}");
                     numbersConsumed.Clear();
@@ -90,6 +92,8 @@ namespace NumberConsumerProject
                 }
             }
 
+            Console.WriteLine();
+            Console.WriteLine($"Number of averages calculated {count}");
             Console.WriteLine("Press any key to close the application...");
             Console.ReadLine();
         }

@@ -49,7 +49,6 @@ namespace NumberConsumerProject.Consumers
                     if (result == null)
                     {
                         // We want to continue listening for new produced records. We do not want to break the loop if currently there are no records for consumtion.
-                        _logger.LogInfo("No message to consume.");
                         continue;
                     }
 
