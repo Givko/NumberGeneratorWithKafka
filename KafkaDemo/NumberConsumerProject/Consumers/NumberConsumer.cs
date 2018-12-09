@@ -26,7 +26,7 @@ namespace NumberConsumerProject.Consumers
 
         public void Consume(Action<string> callback, CancellationToken token)
         {
-            if(callback == null)
+            if (callback == null)
             {
                 throw new ArgumentNullException("The callback must not be null.");
             }
@@ -41,21 +41,23 @@ namespace NumberConsumerProject.Consumers
 
             while (consuming)
             {
-                //On each iteration check if cancelation has been requested by the user.
-                if (token != default(CancellationToken))
-                {
-                    token.ThrowIfCancellationRequested();
-                }
-
                 try
                 {
-                    var result = token == default(CancellationToken) ? _consumer.Consume(new TimeSpan(0,0,3)) : _consumer.Consume(token);
-                    
+                    var result = token == default(CancellationToken) ? _consumer.Consume(new TimeSpan(0, 0, 3)) : _consumer.Consume(token);
+
                     //Consume returns null if there are no records to be consumed from the Kafka topic
                     if (result == null)
-                    {   
-                        continue; // We want to continue listening for new produced records. We do not want to break the loop if currently there are no records for consumtion.
-                    }     
+                    {
+                        // We want to continue listening for new produced records. We do not want to break the loop if currently there are no records for consumtion.
+                        _logger.LogInfo("No message to consume.");
+                        continue;
+                    }
+
+                    //On each iteration check if cancelation has been requested by the user.
+                    if (token != default(CancellationToken))
+                    {
+                        token.ThrowIfCancellationRequested();
+                    }
 
                     callback(result.Value);
                 }
@@ -66,7 +68,7 @@ namespace NumberConsumerProject.Consumers
                 }
             }
         }
-        
+
         #region Base Dispose Pattern
         private bool _disposedValue = false; // To detect redundant calls
 

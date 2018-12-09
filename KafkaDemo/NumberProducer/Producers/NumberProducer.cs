@@ -22,7 +22,7 @@ namespace NumberProducerProject.Producers
             _logger = logger;
             _timeProvider = timeProvider;
             _kafkaTopic = topic;
-            _intervalInMiliseconds = 6000;
+            _intervalInMiliseconds = _timeProvider.GetMilisecondsForSeconds(6);
         }
         
         public async Task ProduceNumbersAsync()

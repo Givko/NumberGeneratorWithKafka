@@ -57,7 +57,7 @@ namespace NumberConsumerProject
             {
                 //If the value is not correct we want to log the exception thus notifying for the error.
                 //However, we want to continue listening in order not to miss any important information(given the information is important)
-                if(!int.TryParse(value, out int number))
+                if (!int.TryParse(value, out int number))
                 {
                     logger.LogException(new FormatException("The number from the consumer is not in a correct format."));
                     return;
@@ -71,14 +71,14 @@ namespace NumberConsumerProject
                     numbersConsumed.Clear();
                 }
             };
-            
+
             using (numberConsumer)
             {
                 try
                 {
                     numberConsumer.Consume(callbackAction, token);
                 }
-                catch(OperationCanceledException ex)
+                catch (OperationCanceledException ex)
                 {
                     logger.LogInfo(ex.Message);
                 }

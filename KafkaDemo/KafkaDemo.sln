@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberProducerProject", "NumberProducer\NumberProducerProject.csproj", "{C9F1F395-CAC7-49B8-AF90-EBF190B6FD56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberProducerProject", "NumberProducer\NumberProducerProject.csproj", "{C9F1F395-CAC7-49B8-AF90-EBF190B6FD56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberConsumerProject", "NumberConsumerProject\NumberConsumerProject.csproj", "{AB6D3D16-7E25-409E-A70A-AE0048F97EC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberConsumerProject", "NumberConsumerProject\NumberConsumerProject.csproj", "{AB6D3D16-7E25-409E-A70A-AE0048F97EC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Contracts", "Domain.Contracts\Domain.Contracts.csproj", "{4203C3D6-56D5-474B-9EA7-649DE1C98176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Contracts", "Domain.Contracts\Domain.Contracts.csproj", "{4203C3D6-56D5-474B-9EA7-649DE1C98176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{61EBEC82-D17C-4D4D-A9DA-1AD39A3C73E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{61EBEC82-D17C-4D4D-A9DA-1AD39A3C73E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberProducerProject.UnitTests", "NumberProducerProject.UnitTests\NumberProducerProject.UnitTests.csproj", "{4D5899CC-DEC4-49F2-8C86-466566C675C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberProducerProject.UnitTests", "NumberProducerProject.UnitTests\NumberProducerProject.UnitTests.csproj", "{4D5899CC-DEC4-49F2-8C86-466566C675C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberConsumerProject.UnitTests", "NumberConsumerProject.UnitTests\NumberConsumerProject.UnitTests.csproj", "{E43C9087-5A40-4FF5-BC26-32077FDAA6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "Domain.UnitTests\Domain.UnitTests.csproj", "{34BE8B30-608D-40A0-8465-0C3DFEA2E414}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{4D5899CC-DEC4-49F2-8C86-466566C675C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D5899CC-DEC4-49F2-8C86-466566C675C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5899CC-DEC4-49F2-8C86-466566C675C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43C9087-5A40-4FF5-BC26-32077FDAA6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43C9087-5A40-4FF5-BC26-32077FDAA6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43C9087-5A40-4FF5-BC26-32077FDAA6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43C9087-5A40-4FF5-BC26-32077FDAA6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BE8B30-608D-40A0-8465-0C3DFEA2E414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BE8B30-608D-40A0-8465-0C3DFEA2E414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BE8B30-608D-40A0-8465-0C3DFEA2E414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BE8B30-608D-40A0-8465-0C3DFEA2E414}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
