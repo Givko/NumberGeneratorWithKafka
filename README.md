@@ -4,6 +4,7 @@
 Prerequisites: 
 - Docker
 - Docker Compose
+Link: https://www.docs.docker.com/docker-for-windows/install/
 
 Steps:
 1. Go to the "KafkaDockerFiles" folder.
